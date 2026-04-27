@@ -2,22 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/projects/woku/Logo.png" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- PWA: tells iOS Safari this is a web app that can run full-screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Controls the iOS status bar style when running in standalone mode -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- App name shown below the icon on the iOS home screen -->
+    <meta name="apple-mobile-web-app-title" content="Woku" />
+
+    <!--
+      apple-touch-icon: the icon iOS uses when adding to the home screen.
+      Provide at minimum a 180×180 PNG. iOS will scale it automatically.
+      Place icons in /public/icons/ alongside your manifest icons.
+    -->
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+    <!-- Optional: splash screens for different iPhone sizes (iOS 12+) -->
+    <!-- <link rel="apple-touch-startup-image" href="/icons/splash-1170x2532.png" media="..."> -->
+
+    <!-- PWA manifest — required for Android install prompt and Chrome desktop -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#19747E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Woku</title>
 
     <!-- Open Graph -->
     <meta property="og:title" content="Woku" />
     <meta property="og:description" content="A daily word-sudoku puzzle. Solve the grid and find the hidden 9-letter word!" />
-    <meta property="og:image" content="https://jackvanzeeland.com/projects/woku/Logo.png" />
-    <meta property="og:url" content="https://jackvanzeeland.com/projects/woku/" />
+    <meta property="og:image" content="https://woku.jackvanzeeland.com/Logo.png" />
+    <meta property="og:url" content="https://woku.jackvanzeeland.com" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Woku" />
     <meta name="twitter:description" content="A daily word-sudoku puzzle. Solve the grid and find the hidden 9-letter word!" />
-    <meta name="twitter:image" content="https://jackvanzeeland.com/projects/woku/Logo.png" />
+    <meta name="twitter:image" content="https://woku.jackvanzeeland.com/Logo.png" />
   </head>
   <body>
     <div id="root"></div>

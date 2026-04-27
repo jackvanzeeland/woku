@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "Stop": [{
+      "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+      "hooks": [{
+        "type": "command",
+        "command": "bash \"/Users/JVZ/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Projects/woku/.claude/hooks/auto-commit.sh\""
+      }]
+    }]
+  }
+}

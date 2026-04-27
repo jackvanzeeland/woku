@@ -285,6 +285,14 @@ function reducer(state: GameState, action: Action): GameState {
         return { ...newState, gameStatus: 'won' };
       }
 
+      const inKeyRow = state.puzzle.wordRow !== null && r === state.puzzle.wordRow;
+      const inKeyCol = state.puzzle.wordCol !== null && c === state.puzzle.wordCol;
+      if ((inKeyRow || inKeyCol) && action.symbolId !== state.puzzle.solution[r][c]) {
+        const penaltyErrors = newValidationErrors.map((row) => [...row]);
+        penaltyErrors[r][c] = true;
+        return { ...newState, validationErrors: penaltyErrors, penalty: state.penalty + 60 };
+      }
+
       return newState;
     }
 
